@@ -1,0 +1,180 @@
+.content-one-list{
+    @page-padding:0 24px;
+    @page-radius:16px;
+  
+    .loading{
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 32px;
+        color: rgba(157, 157, 157, 1);
+        .dot {
+            display: inline-block; 
+            height: 1em;
+            line-height: 1;
+            text-align: left;
+            vertical-align: -.25em;
+            overflow: hidden;
+        }
+        .dot::before {
+            display: block;
+            content: '...\A..\A.';
+            white-space: pre-wrap;
+            animation: dot 0.8s infinite step-start both;
+        }
+        @keyframes dot {
+            33% { transform: translateY(-2em); }
+            66% { transform: translateY(-1em); }
+        }
+    }
+   
+
+.intro-board{
+    width: 100%;
+    height: 310px;
+    margin-top: 20px;
+    .at-row{
+        display: flex;
+    }
+    .at-col-left{
+        width: 310px;
+        height: 310px;
+    }
+    .at-col{
+        flex: 1;
+    }
+    .at-photo{
+        width: 310px;
+        height: 310px;
+        background-image: url('../../../assets/haozan.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 78px 40px;
+        background-color: rgba(230,229,229,1);
+        border-top-left-radius: @page-radius;
+        border-bottom-left-radius: @page-radius;
+        .photo{
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: @page-radius;
+            border-bottom-left-radius: @page-radius;
+        }
+    }
+    .at-content{
+        background-color: #ffffff;
+        height: 100%;
+        border-top-right-radius: @page-radius;
+        border-bottom-right-radius: @page-radius;
+        padding-left:18px;
+        font-size: 40px;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        flex: 1;
+        .name{
+            color: rgba(13, 11, 32, 1);
+            padding-top: 20px;
+            padding-right: 20px;
+            white-space: normal;
+            .pro-name{
+                display: -webkit-box;
+                word-break: break-all;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-size: 26px;
+                width: 100%;
+            }
+        }
+        .other-board{
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: start;
+        align-items: flex-end;
+        align-content: flex-end;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        width: 100%;
+        }
+        .tips{
+        display: flex;
+        flex-flow:row wrap ;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: space-around;
+        .tip{
+            display: inline-block;
+            color: rgba(157, 157, 157, 1);
+            font-size: 20px;
+            padding: 6px 12px;
+            background-color: rgba(242, 242, 242, 1);
+            border-radius: 18px;
+            margin-right: 10px;
+            margin-bottom: 6px;
+            max-width: 200px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            -o-text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+        .black-tip:extend(.tip){
+            visibility: hidden;
+        }
+        }
+        .price{
+        font-size: 40px;
+        color: rgba(255, 66, 40, 1);
+        width: 100%;
+        font-weight: bold;
+        display: flex;
+        align-items: baseline;
+        align-content: flex-end;
+        overflow: hidden;
+        .symbol{
+            font-size: 24px;
+            margin-right: 5px;
+        }
+        .market{
+            color: rgba(157, 157, 157, 1);
+            font-size: 20px;
+            margin-left: 4px;
+            font-weight: normal;
+        }
+        .sale-num{
+            display: inline-flex;
+            flex: 1;
+            justify-content: flex-end;
+            font-size: 20px;
+            font-weight: normal;
+            color: rgba(157, 157, 157, 1);
+        }
+        }
+        .desc{
+        background:rgba(251, 239, 238, 1);
+        border-radius:4px;
+        font-size: 22px;
+        display: inline-flex;
+        padding:6px 12px;
+        color: rgba(255, 66, 40, 1);
+        font-weight: normal;
+        width: 100%;
+        position: relative;
+        .at-icon{
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex:1;
+            position: relative;
+            top: 2px;
+        }
+        }
+    }
+    }
+      
+      
+
+}

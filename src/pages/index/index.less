@@ -1,0 +1,96 @@
+@page-padding:0 24px;
+@page-radius:16px;
+
+page{
+  background-color: rgba(246, 246, 246, 1);
+}
+
+swiper{
+  height: 300px;
+}
+
+.banner{
+  padding: @page-padding;
+}
+
+.slide-item{
+  background-image: url('../../assets/haozan.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 78px 40px;
+  background-color: rgba(230,229,229,1);
+}
+.header-board{
+  background: linear-gradient(#FFF5EE,#FFEDEC);
+}
+
+.slide-image {
+  width:100%;
+  height:100%;
+  border-radius: @page-radius;
+}
+
+.container{
+  //padding:@page-padding;
+  //margin-top: 20px;
+  background-color: rgba(246, 246, 246, 1);
+  .tab-list-board{
+    // background-color: rgba(246, 246, 246, 1);
+    // padding:@page-padding;
+    .at-tabs{
+      background-color: #fff;
+    }
+    .at-tabs__item{
+      font-weight: bolder;
+    }
+    .at-tabs__item--active{
+      color: #FF4228;
+    }
+    .at-tabs__item-underline{
+      background-color: #FF4228;
+    }
+    .at-tabs-pane{
+      background-color: rgba(246, 246, 246, 1);
+      padding:@page-padding;
+    }
+  }
+
+}
+
+.at-grid-board{
+  margin-top: 30px;
+  background-color: transparent;
+  .at-grid__flex .content-inner__text{
+    font-size: 24px;
+    color:#111111;
+  }
+}
+.loading{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 32px;
+  color: rgba(157, 157, 157, 1);
+  .dot {
+      display: inline-block; 
+      height: 1em;
+      line-height: 1;
+      text-align: left;
+      vertical-align: -.25em;
+      overflow: hidden;
+  }
+  .dot::before {
+      display: block;
+      content: '...\A..\A.';
+      white-space: pre-wrap;
+      animation: dot 0.8s infinite step-start both;
+  }
+  @keyframes dot {
+      33% { transform: translateY(-2em); }
+      66% { transform: translateY(-1em); }
+  }
+}
+
+
